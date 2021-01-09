@@ -2,7 +2,7 @@
 	"id": "r_boardsbar",
 	"uid": "",
 	"name": "BoardsBar",
-	"description": "Starred boards toolbar plugin for Restyaboard",
+	"description": "Makes starred boards appear in footer for quicker access.",
 	"author": "ik9999",
 	"author_email": "q@eqw.me",
 	"author_url": "https://github.com/ik9999",
@@ -10,8 +10,7 @@
 	"price": "Free",
 	"icon": "apps/r_boardsbar/img/icon128.png",
 	"settings_description": "Starred boards toolbar plugin for Restyaboard",
-	"settings": {
-  },
+	"settings": false,
 	"assets": {
 		"css": [
 			"apps/r_boardsbar/css/app.css"
@@ -19,6 +18,11 @@
 		"js": [
 			"apps/r_boardsbar/js/app.js"
 		]
+	},
+	"mutationObservers": {
+		"footer":{
+			"footer-menu" :  "showStarredBoards"
+		}
 	},
 	"enabled": true
 }
